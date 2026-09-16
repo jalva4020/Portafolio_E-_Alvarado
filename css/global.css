@@ -1,0 +1,42 @@
+/* =========================================
+   VARIABLES GLOBALES (DESIGN SYSTEM)
+   ========================================= */
+:root {
+    /* Paleta de Colores (Modo Claro por defecto) */
+    --color-primary: #0284c7; /* Un azul profesional */
+    --color-secondary: #0369a1;
+    --color-background: #ffffff;
+    --color-surface: #f3f4f6;
+    --color-text: #1f2937;
+    --color-text-muted: #4b5563;
+    
+    /* Tipografía */
+    --font-primary: 'Segoe UI', system-ui, sans-serif;
+    
+    /* Espaciados (Escala) */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 2rem;
+    --space-xl: 4rem;
+    
+    /* Bordes y Sombras */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    --shadow-card: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+/* Reseteo básico (buenas prácticas) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+}

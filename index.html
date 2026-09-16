@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E²_Alvarado| Portafolio de Ingeniería de Software</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- CABECERA Y NAVEGACIÓN -->
+    <header class="header">
+        <div class="logo">
+            <span>E²_Alvarado</span>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="design-system.html">Design System</a></li>
+                <li><a href="#contacto" class="btn-primary">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        
+        <!-- SECCIÓN: INICIO -->
+        <section id="inicio" class="hero-section">
+            <div class="hero-content">
+                <h1>Hola, soy Eduardo</h1>
+                <h2>Estudiante de Ingeniería de Software</h2>
+                <p>Especializado en el desarrollo de bases de datos, análisis de datos con Python y arquitectura de sistemas. Transformando datos complejos en soluciones estructuradas.</p>
+                <div class="hero-actions">
+                    <a href="#proyectos" class="btn-primary">Ver mis proyectos</a>
+                    <a href="assets/Eduardo_CV.pdf" class="btn-secondary" download>Descargar CV</a>
+                </div>
+            </div>
+            <figure class="hero-image">
+                <!-- Aquí irá tu foto real -->
+                <img src="assets/img/eduardo-profile.jpg" alt="Fotografía de Eduardo, desarrollador de software">
+            </figure>
+        </section>
+
+        <!-- SECCIÓN: SOBRE MÍ -->
+        <section id="sobre-mi" class="about-section">
+            <h2>Sobre mí</h2>
+            <article class="about-content">
+                <p>Soy un apasionado estudiante de octavo semestre de Ingeniería de Software en la Universidad Estatal de Milagro (UNEMI), residente en Naranjito. A lo largo de mi carrera, he desarrollado un fuerte interés por la gestión de bases de datos relacionales, el Machine Learning y la optimización de procesos.</p>
+                <p>Cuando no estoy programando en Python o estructurando consultas complejas en SQL Server, disfruto de la administración y optimización técnica de servidores de videojuegos, lo que me ha dado una perspectiva práctica sobre redes y rendimiento.</p>
+            </article>
+        </section>
+
+        <!-- SECCIÓN: HABILIDADES -->
+        <section id="habilidades" class="skills-section">
+            <h2>Habilidades Técnicas</h2>
+            <div class="skills-grid">
+                
+                <!-- Categoría 1 -->
+                <article class="skill-category">
+                    <h3>Data & Backend</h3>
+                    <ul>
+                        <li>
+                            <figure>
+                                <img src="assets/icons/python.svg" alt="Ícono de Python">
+                                <figcaption>Python (Pandas, Numpy, Scikit-learn)</figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <img src="assets/icons/sql.svg" alt="Ícono de SQL">
+                                <figcaption>SQL Server & Transact-SQL (T-SQL)</figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <img src="assets/icons/postgres.svg" alt="Ícono de PostgreSQL">
+                                <figcaption>PostgreSQL</figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                </article>
+
+                <!-- Categoría 2 -->
+                <article class="skill-category">
+                    <h3>Herramientas & Control de Versiones</h3>
+                    <ul>
+                        <li>
+                            <figure>
+                                <img src="assets/icons/git.svg" alt="Ícono de Git">
+                                <figcaption>Git & GitHub</figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <img src="assets/icons/svn.svg" alt="Ícono de SVN">
+                                <figcaption>Subversion (SVN) / Mercurial</figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- SECCIÓN: PROYECTOS DESTACADOS -->
+        <section id="proyectos" class="projects-section">
+            <h2>Proyectos Destacados</h2>
+            <div class="projects-grid">
+
+                <!-- Proyecto 1 -->
+                <article class="project-card">
+                    <figure>
+                        <img src="assets/img/proyecto-ml.jpg" alt="Gráfico de dendrograma de segmentación de clientes">
+                    </figure>
+                    <div class="project-info">
+                        <h3>Segmentación de Clientes Automotrices</h3>
+                        <p><strong>Problema:</strong> Necesidad de clasificar perfiles de clientes para estrategias dirigidas.</p>
+                        <p><strong>Descripción:</strong> Modelo de Machine Learning desarrollado en Google Colab aplicando clustering jerárquico aglomerativo con pipelines de Scikit-Learn.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Scikit-Learn</span>
+                            <span>Machine Learning</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn-link">Ver Repositorio</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Proyecto 2 -->
+                <article class="project-card">
+                    <figure>
+                        <img src="assets/img/proyecto-db.jpg" alt="Diagrama entidad-relación del sistema de salón de belleza">
+                    </figure>
+                    <div class="project-info">
+                        <h3>Arquitectura de Base de Datos - Salón de Belleza</h3>
+                        <p><strong>Problema:</strong> Falta de integridad y control estructurado en la información del negocio.</p>
+                        <p><strong>Descripción:</strong> Scripts DDL completos en SQL Server configurando tamaños de archivos, llaves primarias, foráneas y restricciones lógicas.</p>
+                        <div class="project-tech">
+                            <span>SQL Server</span>
+                            <span>T-SQL</span>
+                            <span>Diseño Relacional</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn-link">Ver Repositorio</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Proyecto 3 -->
+                <article class="project-card">
+                    <figure>
+                        <img src="assets/img/proyecto-agro.jpg" alt="Gráficos de datos agrícolas generados en Python">
+                    </figure>
+                    <div class="project-info">
+                        <h3>Análisis de Producción Agrícola</h3>
+                        <p><strong>Problema:</strong> Dificultad para visualizar el rendimiento de cultivos y datos genéticos.</p>
+                        <p><strong>Descripción:</strong> Integración de PostgreSQL y Python (psycopg2) para extraer, analizar con Pandas y graficar datos de producción agrícola.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Pandas</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn-link">Ver Repositorio</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- SECCIÓN: CONTACTO -->
+        <section id="contacto" class="contact-section">
+            <h2>Ponte en contacto</h2>
+            <p>¿Tienes alguna oportunidad profesional o proyecto en mente? ¡Escríbeme!</p>
+            
+            <form action="#" method="POST" class="contact-form" id="formulario-contacto">
+                <div class="form-group">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ej. Juan Pérez">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" required placeholder="tu@correo.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required placeholder="¿En qué te puedo ayudar?"></textarea>
+                </div>
+                
+                <button type="submit" class="btn-primary">Enviar mensaje</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <p>&copy; 2026 Eduardo. Construido con HTML5, CSS3 y JavaScript.</p>
+        <div class="social-links">
+            <a href="#">GitHub</a>
+            <a href="#">LinkedIn</a>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
