@@ -40,3 +40,15 @@ body {
     color: var(--color-text);
     line-height: 1.6;
 }
+
+/* =========================================
+   TEMA OSCURO
+   ========================================= */
+body.dark-theme {
+    --color-background: #0f172a; /* Azul muy oscuro casi negro */
+    --color-surface: #1e293b;    /* Azul oscuro para las tarjetas */
+    --color-text: #f8fafc;       /* Texto blanco */
+    --color-text-muted: #94a3b8; /* Texto gris claro */
+    
+    --shadow-card: 0 4px 6px -1px rgb(0 0 0 / 0.5);
+}
