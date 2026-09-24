@@ -27,6 +27,14 @@
     --shadow-card: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
+html {
+    /* Le dice al navegador que deje un margen superior al hacer scroll hacia un #ID */
+    scroll-padding-top: 80px; 
+    
+    /* Opcional: Le da un efecto de deslizamiento suave muy profesional */
+    scroll-behavior: smooth; 
+}
+
 /* Reseteo básico (buenas prácticas) */
 * {
     margin: 0;

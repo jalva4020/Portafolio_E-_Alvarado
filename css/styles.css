@@ -257,6 +257,25 @@ h2 {
     font-family: var(--font-primary);
     font-size: 1rem;
 }
+/* Ajustes para la sección contenedora */
+.contact-section {
+    padding: 0 2rem; /* Agrega un cojín lateral para que nada toque los bordes */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra todo el contenido (título, párrafo y formulario) */
+    text-align: center;
+}
+
+/* Ajustes para el formulario en sí */
+.contact-form {
+    width: 100%;
+    max-width: 600px; /* Evita que el formulario se estire infinitamente en PC */
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    text-align: left; /* Regresa las etiquetas (Nombre, Correo) a la izquierda */
+}
 
 /* =========================================
    PIE DE PÁGINA
@@ -266,4 +285,113 @@ h2 {
     padding: var(--space-lg);
     background-color: var(--color-surface);
     margin-top: var(--space-xl);
+}
+
+/* =========================================
+   MENÚ HAMBURGUESA Y DISEÑO MÓVIL
+   ========================================= */
+
+/* 1. Ocultar el botón en computadoras por defecto */
+.btn-menu {
+    display: none;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: var(--color-text);
+    cursor: pointer;
+}
+
+/* =========================================
+   2. REGLAS PARA MÓVILES (max-width: 768px)
+   ========================================= */
+@media (max-width: 768px) {
+    /* --- Menú Hamburguesa --- */
+    .btn-menu {
+        display: block;
+    }
+
+    .navbar ul {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 60px; 
+        left: 0;
+        width: 100%;
+        background-color: var(--color-surface);
+        padding: 1rem 0;
+        box-shadow: var(--shadow-card);
+    }
+
+    .navbar ul.menu-activo {
+        display: flex;
+    }
+
+    /* --- Solución de la sección inicio (Hero) --- */
+    .hero-section {
+        flex-direction: column-reverse; /* Obliga a apilar foto y texto verticalmente */
+        text-align: center; /* Centra el texto para que no choque con los bordes */
+        gap: 2rem; /* Reduce el espacio gigante que había entre elementos */
+        padding-top: 2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem; /* Achica el título principal */
+    }
+
+    .hero-actions {
+        justify-content: center;
+        flex-wrap: wrap; /* Evita que los botones se salgan de la pantalla */
+    }
+
+    .hero-image img {
+        width: 220px; /* Achica drásticamente el círculo gris */
+        height: 220px;
+    }
+
+    /* Modificar la lista de enlaces para que sea un menú desplegable */
+    .navbar ul {
+        display: none; /* Lo ocultamos inicialmente */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Ajusta esto según el alto de tu header */
+        left: 0;
+        width: 100%;
+        background-color: var(--color-surface);
+        padding: 1rem 0;
+        box-shadow: var(--shadow-card);
+    }
+
+    /* El JavaScript usará esta clase para mostrar el menú */
+    .navbar ul.menu-activo {
+        display: flex;
+    }
+}
+
+/* =========================================
+   REGLAS PARA TABLETAS (max-width: 1100px)
+   ========================================= */
+@media (max-width: 1100px) {
+    /* 1. Agregamos un colchón lateral para que el texto nunca toque los bordes */
+    main {
+        padding: 0 3rem;
+    }
+
+    /* 2. Apilamos la sección de inicio verticalmente */
+    .hero-section {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 3rem;
+        padding-top: 2rem;
+    }
+
+    /* 3. Centramos los botones del inicio */
+    .hero-actions {
+        justify-content: center;
+    }
+
+    /* 4. Ajustamos el tamaño del círculo para que sea proporcional a la tableta */
+    .hero-image img {
+        width: 300px;
+        height: 300px;
+    }
 }

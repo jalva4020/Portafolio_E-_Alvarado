@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
     const btntema = document.getElementById('btn-tema');
     const body = document.body;
@@ -21,3 +22,18 @@ document.addEventListener('DOMContentLoaded', () => {
         aplicarTema(esOscuro);
     });
 });
+
+// =========================================
+    // MENÚ HAMBURGUESA
+    // =========================================
+    const btnMenu = document.getElementById('btn-menu');
+    const menuNav = document.querySelector('.navbar ul');
+
+    // Validamos que ambos elementos existan para evitar errores
+    if (btnMenu && menuNav) {
+        btnMenu.addEventListener('click', () => {
+            // Alterna la clase que creamos en CSS para mostrar/ocultar
+            menuNav.classList.toggle('menu-activo');
+        });
+    }
+    
