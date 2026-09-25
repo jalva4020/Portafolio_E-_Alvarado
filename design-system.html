@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design System | E²_Alvarado</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+
+    <!-- CABECERA (La misma del index para poder navegar) -->
+    <header class="header">
+        <div class="logo">
+            <span>E²_Alvarado</span>
+        </div>
+        <nav class="navbar">
+            <button id="btn-menu" class="btn-menu" aria-label="Abrir menú">☰</button>
+            <ul id="menu-principal">
+                <li><a href="index.html">Volver al Portafolio</a></li>
+                <li><button id="btn-tema" class="btn-secondary" style="margin-left: 1rem;">🌙</button></li>
+            </ul>
+        </nav>
+    </header>   
+
+    <main class="container" style="padding-top: 4rem; padding-bottom: 4rem;">
+        
+        <div style="text-align: center; margin-bottom: 4rem;">
+            <h1>Design System</h1>
+            <p>Guía de estilos, componentes y variables del proyecto.</p>
+        </div>
+
+        <!-- SECCIÓN: COLORES -->
+        <section style="margin-bottom: 4rem;">
+            <h2>1. Paleta de Colores</h2>
+            <p style="margin-bottom: 1rem;">Variables CSS utilizadas para mantener la consistencia visual y el modo oscuro.</p>
+            
+            <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                <div style="background-color: var(--color-primary); color: var(--color-background); padding: 2rem; border-radius: 8px; flex: 1; min-width: 150px; text-align: center; font-weight: bold;">
+                    --color-primary
+                </div>
+                <div style="background-color: var(--color-secondary); color: var(--color-background); padding: 2rem; border-radius: 8px; flex: 1; min-width: 150px; text-align: center; font-weight: bold;">
+                    --color-secondary
+                </div>
+                <div style="background-color: var(--color-surface); color: var(--color-text); border: 1px solid var(--color-primary); padding: 2rem; border-radius: 8px; flex: 1; min-width: 150px; text-align: center; font-weight: bold;">
+                    --color-surface
+                </div>
+                <div style="background-color: var(--color-background); color: var(--color-text); border: 1px solid var(--color-primary); padding: 2rem; border-radius: 8px; flex: 1; min-width: 150px; text-align: center; font-weight: bold;">
+                    --color-background
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: TIPOGRAFÍA -->
+        <section style="margin-bottom: 4rem;">
+            <h2>2. Tipografía e Interlineado</h2>
+            <div style="background-color: var(--color-surface); padding: 2rem; border-radius: 8px; margin-top: 1rem;">
+                <h1>Encabezado H1 - Título Principal</h1>
+                <h2>Encabezado H2 - Título de Sección</h2>
+                <h3>Encabezado H3 - Subtítulos o Tarjetas</h3>
+                <p><strong>Párrafo regular:</strong> Este es un texto de ejemplo. Se utiliza la fuente del sistema (System Fonts) para garantizar el mejor rendimiento y legibilidad. El interlineado está diseñado para que la lectura sea fluida tanto en monitores de escritorio como en dispositivos móviles.</p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: BOTONES -->
+        <section>
+            <h2>3. Componentes: Botones</h2>
+            <p style="margin-bottom: 1rem;">Elementos interactivos con estados de "hover" (pasar el cursor) integrados en el CSS.</p>
+            
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; background-color: var(--color-surface); padding: 2rem; border-radius: 8px;">
+                <button class="btn-primary">Botón Primario (.btn-primary)</button>
+                <button class="btn-secondary">Botón Secundario (.btn-secondary)</button>
+                <a href="#" class="btn-link">Enlace (.btn-link)</a>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
