@@ -29,6 +29,19 @@
     border: 1px solid var(--color-primary);
 }
 
+.btn-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--color-primary);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.btn-link:hover {
+    color: var(--color-secondary);
+    text-decoration: underline;
+}
+
 /* =========================================
    ESTRUCTURA GENERAL (Main y Secciones)
    ========================================= */
@@ -139,36 +152,52 @@ h2 {
 }
 
 /* =========================================
-   HABILIDADES (CSS Grid)
+   HABILIDADES / TARJETAS (Diseño uniforme)
    ========================================= */
-.skills-grid {
+.card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--space-lg);
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
 }
 
-.skill-category {
-    background: var(--color-surface);
-    padding: var(--space-md);
+.info-card {
+    background-color: var(--color-surface);
+    border: 1px solid rgba(2, 132, 199, 0.22);
     border-radius: var(--radius-md);
+    padding: 2rem;
+    box-shadow: var(--shadow-card);
 }
 
-.skill-category h3 {
-    margin-bottom: var(--space-md);
-    font-size: 1.2rem;
+.info-card h3 {
+    margin: 0 0 1.5rem;
+    color: var(--color-primary);
+    font-size: 1.7rem;
 }
 
-.skill-category ul {
+.info-list {
     list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    gap: var(--space-sm);
+    gap: 0.85rem;
 }
 
-.skill-category figure {
+.info-item {
     display: flex;
     align-items: center;
-    gap: var(--space-sm);
+    gap: 0.75rem;
+    color: var(--color-text);
+    font-weight: 500;
+    line-height: 1.5;
+    min-height: 2.5rem;
+}
+
+.info-item img {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    object-fit: contain;
 }
 
 /* =========================================
@@ -181,24 +210,26 @@ h2 {
 }
 
 .project-card {
-    background: var(--color-background);
+    background: var(--color-surface);
+    border: 1px solid rgba(2, 132, 199, 0.18);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-card);
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
+    border-color: rgba(2, 132, 199, 0.45);
 }
 
 .project-card img {
     width: 100%;
     height: 220px;
     object-fit: cover;
-    background-color: var(--color-surface); 
+    background: linear-gradient(135deg, rgba(2,132,199,0.08), rgba(15,23,42,0.12));
 }
 
 .project-info {
@@ -210,6 +241,7 @@ h2 {
 
 .project-info h3 {
     margin-bottom: var(--space-xs);
+    color: var(--color-primary);
 }
 
 .project-tech {
@@ -221,12 +253,17 @@ h2 {
 }
 
 .project-tech span {
-    background-color: var(--color-surface);
+    background-color: rgba(2, 132, 199, 0.12);
+    border: 1px solid rgba(2, 132, 199, 0.2);
     padding: 4px 12px;
     border-radius: var(--radius-lg);
     font-size: 0.85rem;
     font-weight: 600;
     color: var(--color-primary);
+}
+
+.project-links {
+    margin-top: 0.5rem;
 }
 
 /* =========================================

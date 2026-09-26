@@ -37,3 +37,42 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
+    /* ==========================================
+   VALIDACIÓN DEL FORMULARIO DE CONTACTO
+   ========================================== */
+const formulario = document.getElementById('formulario-contacto');
+
+if (formulario) {
+    formulario.addEventListener('submit', function(evento) {
+        // 1. Evita que la página se recargue al instante
+        evento.preventDefault(); 
+
+        // 2. Obtener los valores de los campos eliminando espacios en blanco al inicio y final
+        const nombre = document.getElementById('nombre').value.trim();
+        const correo = document.getElementById('correo').value.trim();
+        const mensaje = document.getElementById('mensaje').value.trim();
+
+        // 3. Expresión regular para verificar que sea un formato de correo real
+        const regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        // 4. Validaciones
+        if (nombre === '') {
+            alert('Por favor, ingresa tu nombre completo.');
+            return; // Detiene la ejecución si hay error
+        }
+
+        if (correo === '' || !regexCorreo.test(correo)) {
+            alert('Por favor, ingresa un correo electrónico válido.');
+            return;
+        }
+
+        if (mensaje === '') {
+            alert('Por favor, escribe tu mensaje antes de enviar.');
+            return;
+        }
+
+        // 5. Si pasa todas las validaciones
+        alert('¡Gracias, ' + nombre + '! Tu mensaje se ha validado correctamente.');
+        formulario.reset(); // Limpia los campos del formulario
+    });
+}
