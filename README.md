@@ -69,9 +69,6 @@ http://localhost:8000/
 
 https://jalva4020.github.io/Portafolio_E-_Alvarado/
 
-## GitHub Pages
-
-El proyecto puede publicarse con GitHub Pages desde la rama principal o desde la carpeta `main` del repositorio, configurando el sitio en la sección de Settings > Pages.
 
 ## Contacto
 
