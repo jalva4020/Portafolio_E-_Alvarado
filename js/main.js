@@ -43,36 +43,80 @@ document.addEventListener('DOMContentLoaded', () => {
 const formulario = document.getElementById('formulario-contacto');
 
 if (formulario) {
-    formulario.addEventListener('submit', function(evento) {
-        // 1. Evita que la página se recargue al instante
-        evento.preventDefault(); 
+    const nombreInput = document.getElementById('nombre');
+    const correoInput = document.getElementById('correo');
+    const mensajeInput = document.getElementById('mensaje');
 
-        // 2. Obtener los valores de los campos eliminando espacios en blanco al inicio y final
-        const nombre = document.getElementById('nombre').value.trim();
-        const correo = document.getElementById('correo').value.trim();
-        const mensaje = document.getElementById('mensaje').value.trim();
+    const mostrarError = (campo, mensaje) => {
+        const errorElemento = campo.parentElement.querySelector('.error-message');
 
-        // 3. Expresión regular para verificar que sea un formato de correo real
+        if (errorElemento) {
+            errorElemento.textContent = mensaje;
+        } else {
+            const elemento = document.createElement('small');
+            elemento.className = 'error-message';
+            elemento.style.color = '#f87171';
+            elemento.style.display = 'block';
+            elemento.style.marginTop = '0.35rem';
+            elemento.textContent = mensaje;
+            campo.parentElement.appendChild(elemento);
+        }
+
+        campo.style.borderColor = '#f87171';
+    };
+
+    const limpiarError = (campo) => {
+        const errorElemento = campo.parentElement.querySelector('.error-message');
+        if (errorElemento) errorElemento.remove();
+        campo.style.borderColor = '#cbd5e1';
+    };
+
+    nombreInput.addEventListener('input', () => {
+        if (nombreInput.value.trim().length >= 2) limpiarError(nombreInput);
+    });
+
+    correoInput.addEventListener('input', () => {
         const regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (regexCorreo.test(correoInput.value.trim())) limpiarError(correoInput);
+    });
 
-        // 4. Validaciones
-        if (nombre === '') {
-            alert('Por favor, ingresa tu nombre completo.');
-            return; // Detiene la ejecución si hay error
+    mensajeInput.addEventListener('input', () => {
+        if (mensajeInput.value.trim().length >= 10) limpiarError(mensajeInput);
+    });
+
+    formulario.addEventListener('submit', function(evento) {
+        evento.preventDefault();
+
+        const nombre = nombreInput.value.trim();
+        const correo = correoInput.value.trim();
+        const mensaje = mensajeInput.value.trim();
+        const regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        let hayError = false;
+
+        if (nombre.length < 2) {
+            mostrarError(nombreInput, 'Por favor, ingresa tu nombre completo.');
+            hayError = true;
+        } else {
+            limpiarError(nombreInput);
         }
 
-        if (correo === '' || !regexCorreo.test(correo)) {
-            alert('Por favor, ingresa un correo electrónico válido.');
-            return;
+        if (!regexCorreo.test(correo)) {
+            mostrarError(correoInput, 'Por favor, ingresa un correo electrónico válido.');
+            hayError = true;
+        } else {
+            limpiarError(correoInput);
         }
 
-        if (mensaje === '') {
-            alert('Por favor, escribe tu mensaje antes de enviar.');
-            return;
+        if (mensaje.length < 10) {
+            mostrarError(mensajeInput, 'El mensaje debe tener al menos 10 caracteres.');
+            hayError = true;
+        } else {
+            limpiarError(mensajeInput);
         }
 
-        // 5. Si pasa todas las validaciones
-        alert('¡Gracias, ' + nombre + '! Tu mensaje se ha validado correctamente.');
-        formulario.reset(); // Limpia los campos del formulario
+        if (hayError) return;
+
+        alert('¡Gracias, ' + nombre + '! Tu mensaje se ha enviado correctamente.');
+        formulario.reset();
     });
 }
