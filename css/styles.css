@@ -141,7 +141,7 @@ h2 {
     justify-content: center;
 }
 
-/* Fondo temporal mientras pones tu foto real */
+
 .hero-image img {
     width: 350px;
     height: 350px;
@@ -296,22 +296,22 @@ h2 {
 }
 /* Ajustes para la sección contenedora */
 .contact-section {
-    padding: 0 2rem; /* Agrega un cojín lateral para que nada toque los bordes */
+    padding: 0 2rem; 
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra todo el contenido (título, párrafo y formulario) */
+    align-items: center; 
     text-align: center;
 }
 
 /* Ajustes para el formulario en sí */
 .contact-form {
     width: 100%;
-    max-width: 600px; /* Evita que el formulario se estire infinitamente en PC */
+    max-width: 600px; 
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
     gap: var(--space-md);
-    text-align: left; /* Regresa las etiquetas (Nombre, Correo) a la izquierda */
+    text-align: left;
 }
 
 /* =========================================
@@ -363,34 +363,34 @@ h2 {
         display: flex;
     }
 
-    /* --- Solución de la sección inicio (Hero) --- */
+    
     .hero-section {
-        flex-direction: column-reverse; /* Obliga a apilar foto y texto verticalmente */
-        text-align: center; /* Centra el texto para que no choque con los bordes */
-        gap: 2rem; /* Reduce el espacio gigante que había entre elementos */
+        flex-direction: column-reverse; 
+        text-align: center; 
+        gap: 2rem; 
         padding-top: 2rem;
     }
 
     .hero-content h1 {
-        font-size: 2.2rem; /* Achica el título principal */
+        font-size: 2.2rem; 
     }
 
     .hero-actions {
         justify-content: center;
-        flex-wrap: wrap; /* Evita que los botones se salgan de la pantalla */
+        flex-wrap: wrap; 
     }
 
     .hero-image img {
-        width: 220px; /* Achica drásticamente el círculo gris */
+        width: 220px; 
         height: 220px;
     }
 
     /* Modificar la lista de enlaces para que sea un menú desplegable */
     .navbar ul {
-        display: none; /* Lo ocultamos inicialmente */
+        display: none; 
         flex-direction: column;
         position: absolute;
-        top: 60px; /* Ajusta esto según el alto de tu header */
+        top: 60px; 
         left: 0;
         width: 100%;
         background-color: var(--color-surface);
