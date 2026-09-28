@@ -3,7 +3,7 @@
    ========================================= */
 :root {
     /* Paleta de Colores (Modo Claro por defecto) */
-    --color-primary: #0284c7; /* Un azul profesional */
+    --color-primary: #0284c7; 
     --color-secondary: #0369a1;
     --color-background: #ffffff;
     --color-surface: #f3f4f6;
@@ -53,10 +53,10 @@ body {
    TEMA OSCURO
    ========================================= */
 body.dark-theme {
-    --color-background: #0f172a; /* Azul muy oscuro casi negro */
-    --color-surface: #1e293b;    /* Azul oscuro para las tarjetas */
-    --color-text: #f8fafc;       /* Texto blanco */
-    --color-text-muted: #94a3b8; /* Texto gris claro */
+    --color-background: #0f172a; 
+    --color-surface: #1e293b;    
+    --color-text: #f8fafc;       
+    --color-text-muted: #94a3b8; 
     
     --shadow-card: 0 4px 6px -1px rgb(0 0 0 / 0.5);
 }
